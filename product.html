@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>product</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/share.css">
+    <link rel="stylesheet" href="./css/product.css">
+    <script src="./js/share.js"></script>
+</head>
+
+<body>
+    <!-- nav start -->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container container-fluid">
+            <a class="navbar-brand" href="./index.html">
+                <img src="./_img/logo.png" alt="" width="45" class="d-inline-block m-2">HoneyHash
+            </a>
+            <!-- 漢堡選單按鈕 -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#offcanvasContent"
+                aria-controls="offcanvasContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <!-- 漢堡選單按鈕 -->
+            <!-- 導覽列項目 -->
+            <div class="collapse navbar-collapse">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="./course.html">課程</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">飾品</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">材料包</a>
+                    </li>
+                </ul>
+                <ul class="header_menu mb-2">
+                    <li>
+                        <!-- 搜尋欄 -->
+                        <form class="d-flex" role="search">
+                            <input class="form-control me-1" type="search" placeholder="小花串珠" aria-label="Search">
+                            <button id="search-button" class="btn" type="submit">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                                    class="bi bi-search" viewBox="0 0 16 16">
+                                    <path
+                                        d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
+                                </svg>
+                            </button>
+                        </form>
+                        <!-- 搜尋欄 -->
+                    </li>
+                    <li>
+                        <a class="btn" href="">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor"
+                                class="bi bi-person-circle" viewBox="0 0 16 16">
+                                <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" />
+                                <path fill-rule="evenodd"
+                                    d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z" />
+                            </svg>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="btn" href="">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor"
+                                class="bi bi-cart-fill" viewBox="0 0 16 16">
+                                <path
+                                    d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />
+                            </svg>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <!-- 導覽列項目 -->
+            <!-- 行動裝置-側欄分類頁 -->
+            <div class="offcanvas offcanvas-start col-2 d-lg-none" id="offcanvasContent">
+                <div class="accordion accordion-flush" id="accordionFlushExample">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="flush-headingOne">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#flush-collapseOne" aria-expanded="false"
+                                aria-controls="flush-collapseOne">
+                                課程
+                            </button>
+                        </h2>
+                        <div id="flush-collapseOne" class="accordion-collapse collapse"
+                            aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">
+                                <ul>
+                                    <li>
+                                        <a href="./course.html" style="list-style-type: none;">免費課程</a>
+                                    </li>
+                                    <li>
+                                        <a href="">付費課程</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="flush-headingTwo">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#flush-collapseTwo" aria-expanded="false"
+                                aria-controls="flush-collapseTwo">
+                                飾品
+                            </button>
+                        </h2>
+                        <div id="flush-collapseTwo" class="accordion-collapse collapse"
+                            aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">
+                                <ul>
+                                    <li>
+                                        <a href="./product.html">針式耳環</a>
+                                    </li>
+                                    <li>
+                                        <a href="">夾式耳環</a>
+                                    </li>
+                                    <li>
+                                        <a href="">項鍊</a>
+                                    </li>
+                                    <li>
+                                        <a href="">戒指</a>
+                                    </li>
+                                    <li>
+                                        <a href="">髮飾配件</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="flush-headingThree">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#flush-collapseThree" aria-expanded="false"
+                                aria-controls="flush-collapseThree">
+                                材料包
+                            </button>
+                        </h2>
+                        <div id="flush-collapseThree" class="accordion-collapse collapse"
+                            aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">
+                                <ul>
+                                    <li>
+                                        <a href="">金屬繞線</a>
+                                    </li>
+                                    <li>
+                                        <a href="">串珠</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 行動裝置-側欄分類頁 -->
+        </div>
+    </nav>
+    <!-- nav end -->
+    <!-- sidebar start -->
+    <div class="myBtn_chat">
+        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
+            class="bi bi-chat-right-text-fill" viewBox="0 0 16 16">
+            <path
+                d="M16 2a2 2 0 0 0-2-2H2a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h9.586a1 1 0 0 1 .707.293l2.853 2.853a.5.5 0 0 0 .854-.353V2zM3.5 3h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1 0-1zm0 2.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1 0-1zm0 2.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1 0-1z" />
+        </svg>
+    </div>
+    <div id="myBtn_top" class="btn" onclick="topFunction()">
+        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-arrow-up-circle"
+            viewBox="0 0 16 16">
+            <path fill-rule="evenodd"
+                d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-7.5 3.5a.5.5 0 0 1-1 0V5.707L5.354 7.854a.5.5 0 1 1-.708-.708l3-3a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 5.707V11.5z" />
+        </svg>
+    </div>
+    <!-- sidebar end -->
+    <!-- content start -->
+    <div class="container d-flex mt-3">
+        <!-- 側欄分類頁 -->
+        <div class="col-2 d-none d-lg-block">
+            <div class="accordion accordion-flush" id="accordionFlushExample">
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="flush-headingOne">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                            課程
+                        </button>
+                    </h2>
+                    <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne"
+                        data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">
+                            <ul>
+                                <li>
+                                    <a href="" style="list-style-type: none;">免費課程</a>
+                                </li>
+                                <li>
+                                    <a href="">付費課程</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="flush-headingTwo">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                            飾品
+                        </button>
+                    </h2>
+                    <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo"
+                        data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">
+                            <ul>
+                                <li>
+                                    <a href="">針式耳環</a>
+                                </li>
+                                <li>
+                                    <a href="">夾式耳環</a>
+                                </li>
+                                <li>
+                                    <a href="">項鍊</a>
+                                </li>
+                                <li>
+                                    <a href="">戒指</a>
+                                </li>
+                                <li>
+                                    <a href="">髮飾配件</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="flush-headingThree">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#flush-collapseThree" aria-expanded="false"
+                            aria-controls="flush-collapseThree">
+                            材料包
+                        </button>
+                    </h2>
+                    <div id="flush-collapseThree" class="accordion-collapse collapse"
+                        aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">
+                            <ul>
+                                <li>
+                                    <a href="">金屬繞線</a>
+                                </li>
+                                <li>
+                                    <a href="">串珠</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 側欄分類頁 -->
+        <div>
+            <div class="col-12">
+                <div>
+                    <img src="./_img/s_1.jpg" class="img-fluid" alt="...">
+                </div>
+                <div class="container">
+                    <div class="d-flex justify-content-between">
+                        <div class="mt-4">
+                            <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+                                <ol class="breadcrumb">
+                                    <li class="breadcrumb-item"><a href="#">Home</a></li>
+                                    <li class="breadcrumb-item active" aria-current="page">Library</li>
+                                </ol>
+                            </nav>
+                        </div>
+                        <div class="dropdown mt-3">
+                            <button class="btn dropdown-toggle" type="button" id="dropdownMenu2"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                商品排序
+                            </button>
+                            <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                                <li><button class="dropdown-item" type="button">上架時間: 由新到舊</button></li>
+                                <li><button class="dropdown-item" type="button">上架時間: 由舊到新</button></li>
+                                <li><button class="dropdown-item" type="button">價格: 由高至低</button></li>
+                                <li><button class="dropdown-item" type="button">價格: 由低至高</button></li>
+                                <li><button class="dropdown-item" type="button">銷量: 由高至低</button></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="row row-cols-2 row-cols-lg-3 mt-3">
+                    <div>
+                        <div class="img_container">
+                            <img src="./_img/n_1.jpg" class="card-img-top img_hover" alt="...">
+                        </div>
+                        <div class="text-center mt-2">
+                            <p class="">[耳針] 炫彩花朵耳環</p>
+                            <p class="" style="color:brown;font-weight: bold;">NT$220</p>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="img_container">
+                            <img src="./_img/n_1.jpg" class="card-img-top img_hover" alt="...">
+                        </div>
+                        <div class="text-center mt-2">
+                            <p class="">[耳針] 炫彩花朵耳環</p>
+                            <p class="" style="color:brown;font-weight: bold;">NT$220</p>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="img_container">
+                            <img src="./_img/n_1.jpg" class="card-img-top img_hover" alt="...">
+                        </div>
+                        <div class="text-center mt-2">
+                            <p class="">[耳針] 炫彩花朵耳環</p>
+                            <p class="" style="color:brown;font-weight: bold;">NT$220</p>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="img_container">
+                            <img src="./_img/n_1.jpg" class="card-img-top img_hover" alt="...">
+                        </div>
+                        <div class="text-center mt-2">
+                            <p class="">[耳針] 炫彩花朵耳環</p>
+                            <p class="" style="color:brown;font-weight: bold;">NT$220</p>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="img_container">
+                            <img src="./_img/n_1.jpg" class="card-img-top img_hover" alt="...">
+                        </div>
+                        <div class="text-center mt-2">
+                            <p class="">[耳針] 炫彩花朵耳環</p>
+                            <p class="" style="color:brown;font-weight: bold;">NT$220</p>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="img_container">
+                            <img src="./_img/n_1.jpg" class="card-img-top img_hover" alt="...">
+                        </div>
+                        <div class="text-center mt-2">
+                            <p class="">[耳針] 炫彩花朵耳環</p>
+                            <p class="" style="color:brown;font-weight: bold;">NT$220</p>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="img_container">
+                            <img src="./_img/n_1.jpg" class="card-img-top img_hover" alt="...">
+                        </div>
+                        <div class="text-center mt-2">
+                            <p class="">[耳針] 炫彩花朵耳環</p>
+                            <p class="" style="color:brown;font-weight: bold;">NT$220</p>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="img_container">
+                            <img src="./_img/n_1.jpg" class="card-img-top img_hover" alt="...">
+                        </div>
+                        <div class="text-center mt-2">
+                            <p class="">[耳針] 炫彩花朵耳環</p>
+                            <p class="" style="color:brown;font-weight: bold;">NT$220</p>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="img_container">
+                            <img src="./_img/n_1.jpg" class="card-img-top img_hover" alt="...">
+                        </div>
+                        <div class="text-center mt-2">
+                            <p class="">[耳針] 炫彩花朵耳環</p>
+                            <p class="" style="color:brown;font-weight: bold;">NT$220</p>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="img_container">
+                            <img src="./_img/n_1.jpg" class="card-img-top img_hover" alt="...">
+                        </div>
+                        <div class="text-center mt-2">
+                            <p class="">[耳針] 炫彩花朵耳環</p>
+                            <p class="" style="color:brown;font-weight: bold;">NT$220</p>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="img_container">
+                            <img src="./_img/n_1.jpg" class="card-img-top img_hover" alt="...">
+                        </div>
+                        <div class="text-center mt-2">
+                            <p class="">[耳針] 炫彩花朵耳環</p>
+                            <p class="" style="color:brown;font-weight: bold;">NT$220</p>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="img_container">
+                            <img src="./_img/n_1.jpg" class="card-img-top img_hover" alt="...">
+                        </div>
+                        <div class="text-center mt-2">
+                            <p class="">[耳針] 炫彩花朵耳環</p>
+                            <p class="" style="color:brown;font-weight: bold;">NT$220</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- content end -->
+    <!-- 分頁 start -->
+    <div class="container">
+        <nav aria-label="Page navigation example">
+            <ul class="pagination justify-content-end mt-4 mb-4">
+                <li class="page-item">
+                    <a class="page-link" href="#" aria-label="Previous">
+                        <span aria-hidden="true">&laquo;</span>
+                    </a>
+                </li>
+                <li class="page-item"><a class="page-link" href="#">1</a></li>
+                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                <li class="page-item">
+                    <a class="page-link" href="#" aria-label="Next">
+                        <span aria-hidden="true">&raquo;</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+    <!-- 分頁 end -->
+    <!-- footer -->
+    <hr class="container">
+    <div class="container d-lg-flex justify-content-between mb-4">
+        <div>
+            <h5>About HoneyHash</h5>
+            <p>關於美的集合</p>
+        </div>
+        <div>
+            <h5>SERVICE</h5>
+            <ul>
+                <li>如何購買 How To Buy</li>
+                <li>售後服務 After-sales service</li>
+                <li>常見問題 FAQ</li>
+                <li>飾品保養 Maintenance</li>
+                <li>隱私權政策 Privacy</li>
+            </ul>
+        </div>
+        <div>
+            <h5>CONTACT US</h5>
+            <div class="d-lg-flex justify-content-around">
+                <a href="" class="footer_icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
+                        class="bi bi-envelope" viewBox="0 0 16 16">
+                        <path
+                            d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4Zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2Zm13 2.383-4.708 2.825L15 11.105V5.383Zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741ZM1 11.105l4.708-2.897L1 5.383v5.722Z" />
+                    </svg>
+                </a>
+                <a href="" class="footer_icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
+                        class="bi bi-line" viewBox="0 0 16 16">
+                        <path
+                            d="M8 0c4.411 0 8 2.912 8 6.492 0 1.433-.555 2.723-1.715 3.994-1.678 1.932-5.431 4.285-6.285 4.645-.83.35-.734-.197-.696-.413l.003-.018.114-.685c.027-.204.055-.521-.026-.723-.09-.223-.444-.339-.704-.395C2.846 12.39 0 9.701 0 6.492 0 2.912 3.59 0 8 0ZM5.022 7.686H3.497V4.918a.156.156 0 0 0-.155-.156H2.78a.156.156 0 0 0-.156.156v3.486c0 .041.017.08.044.107v.001l.002.002.002.002a.154.154 0 0 0 .108.043h2.242c.086 0 .155-.07.155-.156v-.56a.156.156 0 0 0-.155-.157Zm.791-2.924a.156.156 0 0 0-.156.156v3.486c0 .086.07.155.156.155h.562c.086 0 .155-.07.155-.155V4.918a.156.156 0 0 0-.155-.156h-.562Zm3.863 0a.156.156 0 0 0-.156.156v2.07L7.923 4.832a.17.17 0 0 0-.013-.015v-.001a.139.139 0 0 0-.01-.01l-.003-.003a.092.092 0 0 0-.011-.009h-.001L7.88 4.79l-.003-.002a.029.029 0 0 0-.005-.003l-.008-.005h-.002l-.003-.002-.01-.004-.004-.002a.093.093 0 0 0-.01-.003h-.002l-.003-.001-.009-.002h-.006l-.003-.001h-.004l-.002-.001h-.574a.156.156 0 0 0-.156.155v3.486c0 .086.07.155.156.155h.56c.087 0 .157-.07.157-.155v-2.07l1.6 2.16a.154.154 0 0 0 .039.038l.001.001.01.006.004.002a.066.066 0 0 0 .008.004l.007.003.005.002a.168.168 0 0 0 .01.003h.003a.155.155 0 0 0 .04.006h.56c.087 0 .157-.07.157-.155V4.918a.156.156 0 0 0-.156-.156h-.561Zm3.815.717v-.56a.156.156 0 0 0-.155-.157h-2.242a.155.155 0 0 0-.108.044h-.001l-.001.002-.002.003a.155.155 0 0 0-.044.107v3.486c0 .041.017.08.044.107l.002.003.002.002a.155.155 0 0 0 .108.043h2.242c.086 0 .155-.07.155-.156v-.56a.156.156 0 0 0-.155-.157H11.81v-.589h1.525c.086 0 .155-.07.155-.156v-.56a.156.156 0 0 0-.155-.157H11.81v-.589h1.525c.086 0 .155-.07.155-.156Z" />
+                    </svg>
+                </a>
+                <a href="" class="footer_icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
+                        class="bi bi-facebook" viewBox="0 0 16 16">
+                        <path
+                            d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z" />
+                    </svg>
+                </a>
+                <a href="" class="footer_icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
+                        class="bi bi-instagram" viewBox="0 0 16 16">
+                        <path
+                            d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z" />
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </div>
+    <footer class="text-center py-1 p-3 mb-2 bg-light text-dark">
+        Copyright © 2023 All Rights Reserved
+    </footer>
+    <!-- footer -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

@@ -1,0 +1,52 @@
+/* 標題文字引用了google font */
+.title_font{
+    font-family: 'Charm', cursive;
+    font-size: 4.5vh;
+    text-align: center;
+    /*background-color: rgba(234, 223, 223, 0.5); */
+    text-shadow: 2px 2px 5px rgb(177, 174, 174);
+}
+/* 標題文字引用了google font */
+
+/* 課程文章標題 */
+.title{
+    font-weight: bolder;
+}
+/* 課程文章標題 */
+
+
+/* 課程圖片 hover */
+.course_container{
+    position: relative;
+    overflow: hidden;
+    /* 設定容器的 overflow 屬性為 hidden，超出邊界的部分將會被隱藏 */
+}
+
+.course_hover{
+    display: block;
+    transition: transform 0.2s ease-in-out;
+}
+
+.course_hover:hover{
+    transform: scale(1.1);
+    opacity: 0.8;  /*添加透明度动画 */
+}
+
+.course_container::before{
+    content: "閱讀更多";
+    color: white;
+    font-size: 5vh;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    z-index: 1;
+}
+
+.course_container:hover::before{
+    opacity: 1;
+    z-index: 1;
+}
+
+/* 課程圖片 hover */
